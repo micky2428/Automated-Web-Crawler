@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==2.0.1"
+pandas = "*"
+requests = "*"
+pydantic = "*"
+sqlalchemy = "*"
+loguru = "*"
+setuptools = {editable = true, path = "."}
+shopData = {editable = true, path = "."}
+selenium = "*"
+bs4 = "*"
+numpy = "*"
+datetime = "*"
+router = "*"
+pymysql = "*"
+webdriver-manager = "*"
+celery = "*"
+openpyxl = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
