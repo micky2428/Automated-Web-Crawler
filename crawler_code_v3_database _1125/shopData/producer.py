@@ -120,7 +120,6 @@ def Update(dataset: str, keyword: str, num_pages: str):
             # 上傳資料
             db_dataset = dict(
                 PchomeData="PchomeData",
-                # 可添加其他資料表映射
             )
             table_name = db_dataset.get(dataset)
             if table_name:
