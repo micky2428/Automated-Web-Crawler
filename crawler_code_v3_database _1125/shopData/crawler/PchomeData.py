@@ -1,13 +1,3 @@
-# AttributeError: module 'shopData.crawler.Pchome_Data' has no attribute 'gen_task_paramter_list'
-# import sys
-# import pandas as pd
-# import time
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# 
-# import numpy as np
-# from webdriver_manager.chrome import ChromeDriverManager
-# from loguru import logger
 import typing
 import re
 import time
@@ -22,22 +12,14 @@ from shopData.schema.dataset import (
     check_schema,
 )
 
-# import os
-# # 添加當前目錄（或指定目錄）到 sys.path
-# sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
-# from router import Router
 
 import logging
-
-# 使用主日志配置
 logger = logging.getLogger(__name__)
 
 def some_function():
-    logger.info("執行了一個操作")
+    logger.info("執行操作")
 
 def myheader():
-    """網頁瀏覽時, 所帶的 request header 參數, 模仿瀏覽器發送 request"""
     return {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'accept-encoding': 'gzip, deflate, br, zstd',
@@ -247,9 +229,9 @@ def crawler(keyword: str, num_pages: str) -> pd.DataFrame:
 #             data.to_excel(NAME, index=True)
 #             print(f"資料已儲存至 {NAME}")
 #         else:
-#             print("未能成功爬取任何資料，請檢查日誌或程式碼。")
+#             print("未能成功爬取任何資料，請檢查日誌。")
 
 #     except Exception as e:
-#         print(f"主要的程式發生錯誤: {e}")
+#         print(f"主程式發生錯誤: {e}")
 
     
