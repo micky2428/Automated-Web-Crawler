@@ -13,14 +13,13 @@ import pandas as pd
 from datetime import datetime
 
 import logging
-
-# 設定基本的 logging 設定，這樣能顯示訊息
-logging.basicConfig(level=logging.INFO)  # 也可以用 DEBUG、ERROR 等
+# 設定logging 
+logging.basicConfig(level=logging.INFO)  
 logger = logging.getLogger(__name__)
 
 
 def Update(dataset: str, keyword: str, num_pages: str):
-    # 拿取爬蟲任務的參數列表
+    # 爬蟲的參數列表
     parameter_list = getattr(
         importlib.import_module(f"shopData.crawler.{dataset}"),
         "gen_task_paramter_list",
