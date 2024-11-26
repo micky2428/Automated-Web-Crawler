@@ -11,14 +11,6 @@ create-rabbitmq:
 install-python-env:
 	pipenv sync
 
-# 啟動 celery, 專門執行 twse queue 列隊的任務，
-run-celery-twse:
-	pipenv run celery -A shopData.tasks.worker worker --loglevel=info --concurrency=1  --hostname=%h -Q twse
-
-# 啟動 celery, 專門執行 tpex queue 列隊的任務，
-run-celery-tpex:
-	pipenv run celery -A shopData.tasks.worker worker --loglevel=info --concurrency=1  --hostname=%h -Q tpex
-
 # sent task
 sent-shop-data-task:
 	pipenv run python shopData/producer.py PchomeData 玩具 1
@@ -34,3 +26,9 @@ gen-staging-env-variable:
 # 建立 release 環境變數
 gen-release-env-variable:
 	VERSION=RELEASE python genenv.py
+
+
+#未來加入分散式爬蟲
+# 啟動 celery, 執行 其他平臺 queue 的任務
+run-celery-000:
+	pipenv run celery -A shopData.tasks.worker worker --loglevel=info --concurrency=1  --hostname=%h -Q twse
