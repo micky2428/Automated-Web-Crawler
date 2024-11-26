@@ -40,4 +40,4 @@ Implement **distributed crawling** to make the system more efficient and less li
 
 ## References
 
-- [Python 大數據專案 X 工程 X 產品 資料工程師的升級攻略]([https://medium.com/@salman.alamoudi95/integrate-google-drive-for-backup-data-on-android-kotlin-jetpack-compose-e92cff32f71f](https://www.books.com.tw/products/0010964744?gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V9kp31s-cXkZO-qtA28irk0Ykx-GvBCYf7EC1SxKNe-ewxq3-1akl0aAhg2EALw_wcB)])
+- [Python 大數據專案 X 工程 X 產品 資料工程師的升級攻略]([https://www.books.com.tw/products/0010964744?gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V9kp31s-cXkZO-qtA28irk0Ykx-GvBCYf7EC1SxKNe-ewxq3-1akl0aAhg2EALw_wcB])
