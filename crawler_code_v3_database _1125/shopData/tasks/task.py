@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 from shopData.backend import db
 from shopData.tasks.worker import (app,)
 
-# # 註冊 task, 有註冊的 task 才可以變成任務發送給 rabbitmq
+# # 註冊 task，變成任務發送給 rabbitmq
 @app.task()
 def crawler(dataset: str, parameter: typing.Dict[str, typing.Any]): #[{'keyword': '行動電源', 'num_pages': '1', 'data_source': 'PchomeData'}]
     # 使用 getattr, importlib,
@@ -29,10 +29,3 @@ def crawler(dataset: str, parameter: typing.Dict[str, typing.Any]): #[{'keyword'
         logger.info(f"資料成功上傳至資料庫: {dataset}")
     except Exception as e:
         logger.error(f"資料上傳失敗: {e}")
-
-# # 註冊 task, 有註冊的 task 才可以變成任務發送給 rabbitmq
-# @app.task()
-# def crawler(x):
-#     print("crawler")
-#     print("upload db")
-#     return x
