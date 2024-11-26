@@ -19,9 +19,7 @@ def crawler(dataset: str, parameter: typing.Dict[str, typing.Any]): #[{'keyword'
     )(parameter=parameter)
     # 上傳資料庫
     db_dataset = dict(
-        PchomeData="PchomeData",
-        # Buy123_Data="Buy123Data",
-        # Rakuten_Data="RakutenData",   
+        PchomeData="PchomeData",   
     )
     try:
         # 假設 db.upload_data 可以將資料上傳到指定資料庫
