@@ -24,7 +24,7 @@ def get_mysql_shopData_conn() -> engine.base.Connection:
     connect = engine.connect()
     # return connect
     try:
-        # 建立資料庫引擎並嘗試連線
+        # 啟用資料庫並嘗試連線
         engine = create_engine(address)
         connect = engine.connect()
         logger.info("成功連線至資料庫!")
