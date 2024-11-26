@@ -1,21 +1,6 @@
 """pip install SQLAlchemy"""
 from sqlalchemy import create_engine,engine
 
-# 未架rabbitmq前
-# def get_mysql_shopData_conn() -> engine.base.Connection:
-#     """
-#     user: admin
-#     password: bsmi-ks
-#     host: localhost
-#     port: 3306
-#     database: shopData
-#     如果有實體 IP，以上設定可以自行更改
-#     """
-#     address = "mysql+pymysql://root:bsmi-ks07@localhost:3306/shopData"
-#     engine = create_engine(address)
-#     connect = engine.connect()
-#     return connect
-
 from shopData.config import (
     MYSQL_DATA_USER,
     MYSQL_DATA_PASSWORD,
@@ -49,7 +34,7 @@ def get_mysql_shopData_conn() -> engine.base.Connection:
         logger.info(f"資料庫中的表格: {tables}")
         return connect
     except Exception as e:
-        # 如果連線失敗，捕捉並記錄錯誤
+        # 連線失敗，記錄錯誤
         logger.error(f"資料庫連線失敗: {e}")
         return None
     
